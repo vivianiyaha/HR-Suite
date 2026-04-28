@@ -63,7 +63,8 @@ links = {
     "HR Decision Tool": "https://hrdecisiontool.streamlit.app/",
     "HR KPI Prediction": "https://hr-kpi-prediction-model.streamlit.app/",
     "Employee Attrition": "https://employeeattritionmodel.streamlit.app/",
-    "Performance Prediction": "https://employee-performanceprediction.streamlit.app/"
+    "Performance Prediction": "https://employee-performanceprediction.streamlit.app/",
+    "HR Payroll Calculator": "https://hrpayrollapp.streamlit.app/"
 }
 
 # -----------------------
@@ -77,7 +78,7 @@ st.markdown('<div class="subtitle">All-in-One Intelligent HR Analytics Platform<
 # -----------------------
 page = st.sidebar.radio(
     "Navigate",
-    ["🏠 Home", "🧑‍💼 HR Decision", "📊 KPI Model", "📉 Attrition", "📈 Performance"]
+    ["🏠 Home", "🧑‍💼 HR Decision", "📊 KPI Model", "📉 Attrition", "📈 Performance", "HR Payroll Calculator"]
 )
 
 # -----------------------
@@ -121,6 +122,14 @@ if page == "🏠 Home":
         """, unsafe_allow_html=True)
         st.link_button("Open Performance Model", links["Performance Prediction"])
 
+        st.markdown("""
+        <div class="card">
+            <h3>📈 HR Payroll Calculator</h3>
+            <p>HR payroll calculator.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        st.link_button("HR Payroll Calculator", links["HR Payroll Calculator"])
+
 # -----------------------
 # INDIVIDUAL PAGES
 # -----------------------
@@ -139,3 +148,7 @@ elif page == "📉 Attrition":
 elif page == "📈 Performance":
     st.title("Employee Performance Prediction")
     st.components.v1.iframe(links["Performance Prediction"], height=800)
+
+elif page == "📈 HR Payroll Calculator":
+    st.title("HR Payroll Calculator")
+    st.components.v1.iframe(links["HR Payroll Calculator"], height=800)
