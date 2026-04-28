@@ -78,7 +78,7 @@ st.markdown('<div class="subtitle">All-in-One Intelligent HR Analytics Platform<
 # -----------------------
 page = st.sidebar.radio(
     "Navigate",
-    ["🏠 Home", "🧑‍💼 HR Decision", "📊 KPI Model", "📉 Attrition", "📈 Performance", "HR Payroll Calculator"]
+    ["🏠 Home", "🧑‍💼 HR Decision", "📊 KPI Model", "📉 Attrition", "📈 Performance", "👥HR Payroll Calculator"]
 )
 
 # -----------------------
